@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_e06_operaciones"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ejemplo06_controlspinner_operaciones">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/boton_estilo_3"
+        app:backgroundTint="@null"
+        android:padding="40dp">
+
+        <TextView
+
+            android:layout_weight="1"
+            android:id="@+id/tv_titulo_operaciones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/libre_baskerville"
+            android:text="Operaciones"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:layout_weight="1.5"
+            android:src="@drawable/operaciones"
+
+            />
+        <LinearLayout
+            android:layout_weight="1"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:textColor="@color/verde_bosque"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/libre_baskerville"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:text="Cantidad de dígitos"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:layout_weight="1"
+
+                android:id="@+id/spinner_digitos"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+
+                android:textColor="@color/verde_bosque"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/libre_baskerville"
+                android:textStyle="bold"
+                android:text="Cantidad de decimales"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/spinner_decimales"
+
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <EditText
+            android:layout_weight="0.3"
+            android:textSize="20sp"
+            android:textColorHint="@color/gris"
+            android:textColor="@color/black"
+            android:fontFamily="@font/libre_baskerville"
+            android:textStyle="bold"
+            android:id="@+id/et1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:hint="Ingrese el primer número..."
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.174"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.107" />
+
+        <EditText
+            android:layout_weight="0.3"
+            android:textSize="20sp"
+            android:fontFamily="@font/libre_baskerville"
+            android:textStyle="bold"
+            android:textColorHint="@color/gris"
+            android:textColor="@color/black"
+            android:id="@+id/et2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="numberDecimal"
+
+            android:hint="Ingrese el segundo número..."
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.174"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.225" />
+
+        <!-- Spinner para seleccionar la operación -->
+        <Spinner
+            android:layout_weight="4"
+
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.345" />
+
+        <!-- Botón de operar -->
+        <Button
+            android:layout_weight="1"
+            android:textSize="28sp"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/verde_bosque"
+            android:id="@+id/boton_operar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="operar"
+
+            android:text="Operar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.481"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.45" />
+
+        <TextView
+            android:layout_weight="1"
+
+            android:textColor="@color/verde_bosque"
+            android:textSize="28sp"
+            android:id="@+id/tv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Resultado"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.181"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.547" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

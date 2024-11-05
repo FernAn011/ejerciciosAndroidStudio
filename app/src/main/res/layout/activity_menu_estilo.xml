@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_menu_estilo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menu_estilo">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/boton_estilo_3"
+        app:backgroundTint="@null"
+        android:padding="16dp">
+
+
+        <TextView
+            android:id="@+id/tv_inicio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/libre_baskerville"
+            android:text="Inicio"
+            android:textSize="80sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_gravity="center"/>
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="160dp"
+            android:src="@drawable/casa"
+            android:layout_gravity="center"
+            />
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:columnCount="2"
+            android:layout_marginTop="16dp"
+            android:minHeight="400sp">
+
+            <FrameLayout
+                android:layout_margin="20dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@drawable/boton_estilo_2"
+                app:backgroundTint="@null"
+                android:onClick="act_operaciones"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imagen2"
+                        android:layout_width="113dp"
+                        android:layout_height="113dp"
+                        android:background="@drawable/boton_estilo_4"
+                        android:rotation="-25"
+                        android:scaleType="centerCrop"
+
+                        android:scaleX="0.7"
+                        android:scaleY="0.7"
+                        android:src="@drawable/img_operaciones"
+                        app:backgroundTint="@null" />
+
+                    <TextView
+
+                        android:id="@+id/text1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/libre_baskerville"
+                        android:text="Operaciones"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </FrameLayout>
+
+
+
+            <!--android:padding="12dp"
+            android:minHeight="56dp"
+            android:minWidth="200dp"-->
+
+            <FrameLayout
+                android:layout_margin="20dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@drawable/boton_estilo_2"
+                app:backgroundTint="@null"
+
+                android:onClick="act_paises"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imagen3"
+                        android:layout_width="113dp"
+                        android:layout_height="113dp"
+                        android:background="@drawable/boton_estilo_4"
+                        android:rotation="0"
+                        android:scaleType="centerCrop"
+                        android:scaleX="0.7"
+                        android:scaleY="0.7"
+                        android:src="@drawable/img_paises_y_capitales"
+                        app:backgroundTint="@null" />
+
+                    <TextView
+
+                        android:id="@+id/text2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/libre_baskerville"
+                        android:text="Paises"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_margin="20dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@drawable/boton_estilo_2"
+                app:backgroundTint="@null"
+
+                android:onClick="act_animales"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imagen4"
+                        android:layout_width="113dp"
+                        android:layout_height="113dp"
+                        android:background="@drawable/boton_estilo_4"
+                        android:rotation="0"
+                        android:scaleType="centerCrop"
+                        android:scaleX="0.7"
+                        android:scaleY="0.7"
+                        android:src="@drawable/img_animales"
+                        app:backgroundTint="@null" />
+
+                    <TextView
+
+                        android:id="@+id/text3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/libre_baskerville"
+                        android:text="Animales"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_margin="20dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@drawable/boton_estilo_2"
+                app:backgroundTint="@null"
+
+                android:onClick="act_acerca"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imagen5"
+                        android:layout_width="113dp"
+                        android:layout_height="113dp"
+                        android:background="@drawable/boton_estilo_4"
+                        android:rotation="0"
+                        android:scaleType="centerCrop"
+                        android:scaleX="0.7"
+                        android:scaleY="0.7"
+                        android:src="@drawable/img_acerca"
+                        app:backgroundTint="@null" />
+
+                    <TextView
+
+                        android:id="@+id/text4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/libre_baskerville"
+                        android:text="Acerca"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </FrameLayout>
+            <FrameLayout
+                android:layout_margin="20dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@drawable/boton_estilo_2"
+                app:backgroundTint="@null"
+                android:onClick="act_formulario"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/img_encuesta"
+                        android:layout_width="113dp"
+                        android:layout_height="113dp"
+                        android:background="@drawable/boton_estilo_4"
+
+                        android:scaleType="centerCrop"
+
+                        android:scaleX="0.7"
+                        android:scaleY="0.7"
+                        android:src="@drawable/img_encuesta"
+                        app:backgroundTint="@null" />
+
+                    <TextView
+
+                        android:id="@+id/text_encuesta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/libre_baskerville"
+                        android:text="Formulario"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </FrameLayout>
+
+
+
+            <!--android:padding="12dp"
+            android:minHeight="56dp"
+            android:minWidth="200dp"-->
+
+            <FrameLayout
+                android:layout_margin="20dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@drawable/boton_estilo_2"
+                app:backgroundTint="@null"
+
+                android:onClick="act_insercion"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/img_datos"
+                        android:layout_width="113dp"
+                        android:layout_height="113dp"
+                        android:background="@drawable/boton_estilo_4"
+                        android:rotation="0"
+                        android:scaleType="centerCrop"
+                        android:scaleX="0.7"
+                        android:scaleY="0.7"
+                        android:src="@drawable/img_datos"
+                        app:backgroundTint="@null" />
+
+                    <TextView
+
+                        android:id="@+id/text_datos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/libre_baskerville"
+                        android:text="Datos"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </FrameLayout>
+
+        </GridLayout>
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Practica3: Mi app</string>
+    <string name="btn_text_cambiar_saludo">Cambiar saludo</string>
+    <string name="txt_hola_desde_xml">Hola desde xml...!</string>
+
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+
+    <string name="navigation_drawer_open"> Abrir</string>
+    <string name="navigation_drawer_close"> Cerrar</string>
+
+    <string name="opcion1">Ejemplo 00</string>
+    <string name="opcion2">Ejemplo 01</string>
+    <string name="opcion3">Ejemplo 02</string>
+    <string name="opcion4">MI DIALOGO</string>
+    <string name="opcionA">ACERCA DE</string>
+    <string name="opcionB">OTRO DIALOGO</string>
+
+    <string name="etiqueta_operaciones">Operaciones</string>
+
+
+    <string name="opcion5">Ejemplos de pestañas deslizantes</string>
+    <string name="opcion6">Ejercicio 01: Formulario</string>
+    <string name="opcion7">Ejercicio 02: Cambiar color</string>
+    <string name="opcion8">Ejercicio 03: Calculadora</string>
+    <string name="opcion9">Ejercicio Pestañas Deslizantes</string>
+    <string name="Salir">Salir</string>
+    <string name="tituloAplicacion">Mi primera app</string>
+    <string name="action_settings">Configuración</string>
+    <string name="textospinner">Escribe aqui la descripcion</string>
+
+
+</resources>

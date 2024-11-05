@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".insercionDialogo"
+    android:background="#e2efc1"
+    android:padding="26dp">
+    <LinearLayout
+        android:id="@+id/contenedor_animales"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+    <Button
+        android:layout_marginTop="90dp"
+        android:id="@+id/input_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ingrese su nombre"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="i_dialog"
+        android:backgroundTint="#065e5d"
+        />
+
+
+        <Button
+            android:id="@+id/checkbox_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#065e5d"
+            android:onClick="cb_dialog"
+            android:text="Seleccionar Opciones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_resultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Datos:"
+            android:textColor="#065e5d"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="RoundedButtonStyle">
+        <!-- Referencia al drawable creado para el fondo del botón -->
+        <item name="android:background">@drawable/boton_estilo_5</item>
+        <!-- Color del texto del botón -->
+        <item name="android:textColor">#FFFFFF</item>
+        <!-- Padding interno del botón -->
+        <item name="android:padding">10dp</item>
+        <!-- Tamaño del texto -->
+        <item name="android:textSize">16sp</item>
+        <!-- Fuente en negrita -->
+        <item name="android:textStyle">bold</item>
+        <!-- Tamaño mínimo del botón -->
+        <item name="android:minHeight">48dp</item>
+        <item name="android:minWidth">200dp</item>
+    </style>
+</resources>

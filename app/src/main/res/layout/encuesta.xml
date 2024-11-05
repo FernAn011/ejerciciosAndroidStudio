@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/encuestaxml"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".encuesta_activity"
+    android:padding="10dp"
+    android:layout_margin="20dp"
+
+    android:background="@color/skyblue">
+
+
+    <TextView
+        android:id="@+id/tv_titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/red"
+        android:gravity="center"
+        android:text="Encuesta de preferencias"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_nombres"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gris"
+        android:layout_marginTop="16dp"
+        android:hint="Nombres y Apellidos"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="70sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_titulo" />
+
+    <LinearLayout
+        android:id="@+id/layout_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp"
+        app:layout_constraintTop_toBottomOf="@id/et_nombres"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/tv_preguntaEmpanada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="¿Cuál es tu empanada favorita?"
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/rg_empanadas"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/rb_queso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Queso" />
+            <RadioButton
+                android:id="@+id/rb_carne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Carne" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/layout_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/tv_preguntaBebida"
+            android:layout_width="match_parent"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="¿Cuál es tu bebida favorita?"
+            android:textSize="20sp" />
+        <RadioGroup
+            android:id="@+id/rgBebidas"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/rbPepsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Pepsi" />
+            <RadioButton
+                android:id="@+id/rbCocaCola"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Coca Cola" />
+
+            <RadioButton
+                android:id="@+id/rbIncaKola"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+
+                android:layout_height="wrap_content"
+                android:text="Inca Kola" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/layout_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <Button
+            android:id="@+id/btn_enviar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:padding="1dp"
+            android:text="Enviar formulario" />
+        <Button
+            android:id="@+id/btn_empanadas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:padding="1dp"
+            android:text="Ver cantidad de preferencias" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_resultado_encuesta1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resultados empanadas"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:visibility="visible"
+        android:layout_marginVertical="10dp"
+        android:layout_marginLeft="30dp"
+        android:gravity="left"
+        app:layout_constraintTop_toBottomOf="@id/layout_3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/tv_resultado_encuesta2"
+        />
+
+    <TextView
+        android:id="@+id/tv_resultado_encuesta2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resultados bebidas"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:visibility="visible"
+        android:layout_marginVertical="10dp"
+        android:layout_marginLeft="30dp"
+        android:gravity="left"
+        app:layout_constraintTop_toBottomOf="@id/tv_resultado_encuesta1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+         />
+</androidx.constraintlayout.widget.ConstraintLayout>
